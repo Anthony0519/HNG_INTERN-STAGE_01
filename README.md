@@ -21,14 +21,14 @@
 
 ## DOCUMENTATION
 1. ENDPOINT: GET
-    - 
+    - https://hng-intern-stage-01.vercel.app/api/classify-number?number=371
 2. SUCCESS RESPONSE FORMAT:
     - {
     "number": 10,
     "is_prime": false,
     "is_perfect": false,
     "properties": [
-        "Even"
+        "even"
     ],
     "digit_sum": 1,
     "fun_fact": "10 is the base of our number system."
