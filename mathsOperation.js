@@ -22,23 +22,23 @@ exports.isPerfectNumber = (num)=>{
 
 // get the digit sum of a number 
 exports.digitSum = (num)=>{
-    const toStr = num.toString().split('')
+    const toStr = Math.abs(num).toString().split('')
     let sum = 0
 
-    for (const num of toStr) {
-        sum += Number(num)
+    for (const digit of toStr) {
+        sum += Number(digit)
     }
     return sum
 }
 
 // check for an armstrong numbers 
 const isArmstrong = (num)=>{
-    const toStr = num.toString().split('')
+    const toStr = Math.abs(num).toString().split('')
     const power = toStr.length
     let sum = 0
 
-    for (const num of toStr) {
-        sum += Math.pow(Number(num),power)
+    for (const digit of toStr) {
+        sum += Math.pow(Number(digit),power)
     }
     return sum === num
 }
