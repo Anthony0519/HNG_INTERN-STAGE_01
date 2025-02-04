@@ -11,20 +11,21 @@ app.use(cors({origin: "*"}))
 
 app.get("/api/classify-number",  async (req, res) => {
     try {
-        const num = Number(req.query.num)
-        if(!num || isNaN(num)){
+        const num = req.query.num
+        if(!num || isNaN(Number(num))){
             return res.status(400).json({
-                number: "alphabet or special character",
+                number: "alphabet",
                 error: true
             })
         }
+        const number = Number(num)
         const response = {
-            number: num,
-            is_prime: isPrimeNumber(num),
-            is_perfect: isPerfectNumber(num),
-            properties: getProperties(num),
-            digit_sum: digitSum(num),
-            fun_fact: await fun_fact(num)
+            number: number,
+            is_prime: isPrimeNumber(number),
+            is_perfect: isPerfectNumber(number),
+            properties: getProperties(number),
+            digit_sum: digitSum(number),
+            fun_fact: await fun_fact(number)
         }
         res.status(200).json(response)
     } catch (error) {

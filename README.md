@@ -35,7 +35,7 @@
     }
 3. ERROR RESPONSE FORMAT:
     - {
-    "number": "alphabet or special character",
+    "number": "alphabet",
     "error": true
     }
 
