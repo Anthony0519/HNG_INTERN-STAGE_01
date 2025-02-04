@@ -12,9 +12,9 @@ app.use(cors({origin: "*"}))
 app.get("/api/classify-number",  async (req, res) => {
     try {
         const num = Number(req.query.num)
-        if(isNaN(num)){
+        if(!num || isNaN(num)){
             return res.status(400).json({
-                number: "alphabet",
+                number: "alphabet or special character",
                 error: true
             })
         }
