@@ -3,7 +3,7 @@
     "name": "hng-intern-stage_01",
     "builds": [
       {
-        "src": "server.js",
+        "src": "app.js",
         "use": "@vercel/node"
       }
     ],
@@ -21,7 +21,7 @@
     "rewrites": [
       {
         "source": "/(.*)",
-        "destination": "/server.js"
+        "destination": "/app.js"
       }
     ]
   }
