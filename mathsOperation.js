@@ -46,8 +46,8 @@ const isArmstrong = (num)=>{
 // get the properties of a number (armstrong, odd and even)
 exports.getProperties = (num)=>{
     const properties= []
-    if(isArmstrong(num)) properties.push('Armstrong')
-    properties.push(num % 2 === 0?'Even':'Odd')
+    if(isArmstrong(num)) properties.push('armstrong')
+    properties.push(num % 2 === 0?'even':'odd')
     return properties
 }
 
